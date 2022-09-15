@@ -169,7 +169,11 @@
             if (hasClicked) return true;
         };
         function buttonClick1(event) {
-            window.location.href = 'http://powernod.com/u/data/urls/117183157310/studio_video_1663228698240_20220915162550280_s01.mp4'
+            event.preventDefault();
+            if (!hasClicked) hasClicked = true;
+            overlay.hidden = true;
+            video.play();
+            videoClick();
         }
         function buttonClick2(event) {
             window.location.href = 'https://xingye.me/game/index.php'
